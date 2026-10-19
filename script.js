@@ -3,9 +3,11 @@
    2) Aggiungi una riga qui sotto per ogni foto: {src:"foto/NOME.jpg", de:"Titolo tedesco", it:"Titolo italiano"},
    Le foto compaiono nella galleria e si ingrandiscono al clic. */
 var FOTO = [
-  // {src:"foto/bagno-1.jpg", de:"Badezimmer", it:"Bagno"},
-  // {src:"foto/cucina-1.jpg", de:"Küche", it:"Cucina"},
-  // {src:"foto/pavimento-1.jpg", de:"Wohnbereich", it:"Zona giorno"},
+  {src:"./assets/image.png", de:"", it:""},
+  {src:"./assets/image2.png", de:"", it:""},
+  {src:"./assets/image3.png", de:"", it:""},
+  {src:"./assets/image4.png", de:"", it:""},
+  {src:"./assets/image5.png", de:"", it:""},
 ];
 /* Foto di Antonio (facoltativa), es. "foto/antonio.jpg" */
 var RITRATTO = "";

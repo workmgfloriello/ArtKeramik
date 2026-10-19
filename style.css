@@ -1,13 +1,13 @@
 :root {
-    --char: #1f1b15;
-    --sand: #e8e1d2;
-    --sand2: #dbd2bf;
-    --ivory: #f5f1e8;
-    --gold: #c9a55f;
-    --golddk: #8a6a2c;
-    --ink: #1f1b15;
-    --muted: #5f574a;
-    --ln: #c8bea6;
+    --char: #2b2c30;
+    --sand: #ebebed;
+    --sand2: #d9d9dc;
+    --ivory: #f6f6f7;
+    --gold: #e5252d;
+    --golddk: #c4121a;
+    --ink: #232427;
+    --muted: #55575c;
+    --ln: #c9c9ce;
     --acc: var(--golddk);
     color-scheme: light;
     box-sizing: border-box;
@@ -70,7 +70,7 @@ header {
     left: 0;
     right: 0;
     z-index: 20;
-    background: rgba(31, 27, 21, .92);
+    background: rgba(43, 44, 48, .94);
     backdrop-filter: blur(8px);
     color: var(--ivory)
 }
@@ -111,7 +111,7 @@ nav ul a:hover {
 
 .lang button {
     background: none;
-    border: 1px solid rgba(245, 241, 232, .35);
+    border: 1px solid rgba(246, 246, 247, .35);
     color: var(--ivory);
     font: inherit;
     font-size: .82rem;
@@ -122,7 +122,7 @@ nav ul a:hover {
 .lang button[aria-pressed="true"] {
     background: var(--gold);
     border-color: var(--gold);
-    color: var(--char)
+    color: #fff
 }
 
 @media(max-width:760px) {
@@ -136,12 +136,12 @@ nav ul a:hover {
     background: var(--char);
     color: var(--ivory);
     --acc: var(--gold);
-    --ln: #3d362a
+    --ln: #46474d
 }
 
 .s-dark .lead,
 .s-dark .row p {
-    color: #b9b09c
+    color: #b4b5ba
 }
 
 .s-sand2 {
@@ -167,23 +167,23 @@ nav ul a:hover {
 }
 
 .tiles i {
-    background: #272219;
-    border: 1px solid #38311f;
+    background: #34353a;
+    border: 1px solid #45464c;
     opacity: 0;
     animation: tile .9s cubic-bezier(.2, .7, .2, 1) forwards;
     animation-delay: calc(var(--d)*45ms)
 }
 
 .tiles i:nth-child(4n+1) {
-    background: #2f291d
+    background: #3b3c42
 }
 
 .tiles i:nth-child(9n+3) {
-    background: #3d3423
+    background: #4a4b52
 }
 
 .tiles i:nth-child(13n+5) {
-    background: linear-gradient(135deg, #d9bc82, #8a6a2c)
+    background: linear-gradient(135deg, #e5252d, #8f0e14)
 }
 
 @keyframes tile {
@@ -201,14 +201,14 @@ nav ul a:hover {
 .glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(420px circle at var(--mx, 70%) var(--my, 30%), rgba(201, 165, 95, .3), transparent 70%);
+    background: radial-gradient(420px circle at var(--mx, 70%) var(--my, 30%), rgba(229, 37, 45, .3), transparent 70%);
     pointer-events: none
 }
 
 .shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, var(--char) 8%, rgba(31, 27, 21, .6) 55%, transparent)
+    background: linear-gradient(to top, var(--char) 8%, rgba(43, 44, 48, .6) 55%, transparent)
 }
 
 .hero-in {
@@ -242,8 +242,8 @@ nav ul a:hover {
 
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #e0c78f, #c9a55f);
-    color: var(--char);
+    background: linear-gradient(135deg, #e5252d, #b50f17);
+    color: #fff;
     padding: 14px 32px;
     text-decoration: none;
     font-weight: 500;
@@ -260,7 +260,7 @@ nav ul a:hover {
 .btn.ghost {
     background: transparent;
     color: var(--ivory);
-    border-color: rgba(245, 241, 232, .4)
+    border-color: rgba(246, 246, 247, .4)
 }
 
 .btn.ghost:hover {
@@ -372,7 +372,7 @@ h2 {
 }
 
 .sw div:nth-child(5) {
-    background: conic-gradient(from 30deg, #d9bc82, #8a6a2c, #f5f1e8, #d9bc82, #8a6a2c)
+    background: conic-gradient(from 30deg, #e5252d, #8f0e14, #f6f6f7, #3c3c40, #e5252d)
 }
 
 @media(max-width:700px) {
@@ -435,7 +435,7 @@ h2 {
 .ph span {
     position: relative;
     margin: 14px;
-    background: rgba(31, 27, 21, .85);
+    background: rgba(43, 44, 48, .88);
     color: var(--ivory);
     padding: 4px 12px;
     font-family: "Bodoni Moda", serif;
@@ -463,7 +463,7 @@ h2 {
     position: fixed;
     inset: 0;
     z-index: 50;
-    background: rgba(15, 13, 10, .95);
+    background: rgba(20, 21, 24, .95);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -554,11 +554,11 @@ h2 {
 
 .portrait {
     aspect-ratio: 4/5;
-    background: linear-gradient(160deg, #e0c78f, #a8873f);
+    background: linear-gradient(160deg, #d3141c, #5e0a0f);
     display: flex;
     align-items: flex-end;
     padding: 24px;
-    color: var(--char);
+    color: #fff;
     font-family: "Bodoni Moda", serif;
     font-size: 1.4rem;
     border-bottom: 4px solid var(--char);
@@ -646,8 +646,8 @@ details p {
 }
 
 footer {
-    background: #14110d;
-    color: #a79f8c;
+    background: #1d1e21;
+    color: #a8a9ae;
     padding: 32px 0;
     font-size: .9rem
 }
@@ -666,5 +666,12 @@ footer {
         transition: none
     }
 }
-footer a{color:var(--gold);text-decoration:none}
-footer a:hover{text-decoration:underline}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none
+}
+
+footer a:hover {
+    text-decoration: underline
+}

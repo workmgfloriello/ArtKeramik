@@ -19,7 +19,7 @@ a{color:inherit}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--white);border-bottom:1px solid var(--ln)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;max-width:1180px;margin:0 auto;position:relative}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bodoni Moda",serif;font-size:1.45rem}
-.mark{background:var(--red);color:#fff;padding:0 9px;font-style:italic}
+.logo img{display:block;height:50px;width:auto}
 nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
 nav ul a{text-decoration:none;font-size:.98rem}
 nav ul a:hover{color:var(--red)}

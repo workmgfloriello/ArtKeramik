@@ -7,14 +7,16 @@ var FOTO = [
   // {src:"foto/cucina-1.jpg", de:"Küche", it:"Cucina"},
   // {src:"foto/pavimento-1.jpg", de:"Wohnbereich", it:"Zona giorno"},
 ];
-/* Foto di Antonio (facoltativa): scrivi il percorso, es. "foto/antonio.jpg" */
+/* Foto di Antonio (facoltativa), es. "foto/antonio.jpg" */
 var RITRATTO = "";
 
 (function () {
   var L = 'de', idx = 0;
   var q = function (s) { return document.querySelector(s); };
+  var qa = function (s) { return document.querySelectorAll(s); };
   var hero = q('.hero'), tiles = q('.tiles'), glow = q('.glow');
 
+  /* mosaico animato */
   function build() {
     tiles.innerHTML = '';
     var s = window.innerWidth < 700 ? 64 : 96, c = Math.ceil(window.innerWidth / s), r = Math.ceil(hero.offsetHeight / s);
@@ -28,6 +30,34 @@ var RITRATTO = "";
     glow.style.setProperty('--mx', (e.clientX - b.left) + 'px');
     glow.style.setProperty('--my', (e.clientY - b.top) + 'px');
   });
+
+  /* immagini: ogni elemento con data-img="foto/x.jpg" prende la foto se esiste */
+  if (RITRATTO) q('.portrait').setAttribute('data-img', RITRATTO);
+  qa('[data-img]').forEach(function (el) {
+    var src = el.getAttribute('data-img'); if (!src) return;
+    var im = new Image();
+    im.onload = function () { el.style.backgroundImage = 'url("' + src + '")'; el.classList.add('has'); };
+    im.src = src;
+  });
+
+  /* slider */
+  var slides = qa('.slide'), dots = q('.dots'), cur = 0, timer;
+  slides.forEach(function (s, i) {
+    var d = document.createElement('button'); d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.onclick = function () { go(i); play(); }; dots.appendChild(d);
+  });
+  function go(i) {
+    cur = (i + slides.length) % slides.length;
+    slides.forEach(function (s, k) { s.classList.toggle('on', k === cur); });
+    dots.childNodes.forEach(function (d, k) { d.classList.toggle('on', k === cur); });
+  }
+  function play() { clearInterval(timer); if (!matchMedia('(prefers-reduced-motion:reduce)').matches) timer = setInterval(function () { go(cur + 1); }, 6500); }
+  go(0); play();
+
+  /* menu mobile */
+  var bg = q('.burger'), menu = q('#menu');
+  bg.onclick = function () { var o = menu.classList.toggle('open'); bg.setAttribute('aria-expanded', o); };
+  menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') { menu.classList.remove('open'); bg.setAttribute('aria-expanded', false); } });
 
   /* galleria */
   var gal = q('#gal');
@@ -48,7 +78,6 @@ var RITRATTO = "";
       var s = document.createElement('span'); tag(s, n[0], n[1]); d.appendChild(s); gal.appendChild(d);
     });
   }
-  if (RITRATTO) { var p = q('.portrait'), im = new Image(); im.src = RITRATTO; im.alt = 'Antonio Floriello'; im.onload = function () { p.insertBefore(im, p.firstChild); }; }
 
   /* lightbox */
   var lb = q('.lb'), lbi = q('.lb img'), lbc = q('.lb p');
@@ -67,10 +96,10 @@ var RITRATTO = "";
   });
 
   /* lingua */
-  var btns = document.querySelectorAll('.lang button');
+  var btns = qa('.lang button');
   function set(l) {
     L = l; document.documentElement.lang = l;
-    document.querySelectorAll('[data-de]').forEach(function (e) { e.innerHTML = e.getAttribute('data-' + l) || e.getAttribute('data-de'); });
+    qa('[data-de]').forEach(function (e) { e.innerHTML = e.getAttribute('data-' + l) || e.getAttribute('data-de'); });
     btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.l === l); });
     if (!lb.hidden) show();
   }

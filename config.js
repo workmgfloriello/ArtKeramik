@@ -6,7 +6,7 @@ var FOTO = [
    {src:"./assets/image.png"},
    {src:"./assets/camere.jpeg"},
    {src:"./assets/bagno2.jpg"},
-   {src:"./assets/image2.png"},
+   {src:"./assets/image2.jpg"},
    {src:"./assets/image3.png"},
    {src:"./assets/image4.png"},
    {src:"./assets/image5.png"},

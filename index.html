@@ -29,6 +29,7 @@
                 <li><a href="#top" data-de="Startseite" data-it="Home">Startseite</a></li>
                 <li><a href="#leistungen" data-de="Leistungen" data-it="Servizi">Leistungen</a></li>
                 <li><a href="#projekte" data-de="Projekte" data-it="Lavori">Projekte</a></li>
+                <li data-vnav hidden><a href="#video" data-de="Videos" data-it="Video">Videos</a></li>
                 <li><a href="#ueber" data-de="Über uns" data-it="Chi siamo">Über uns</a></li>
                 <li><a href="#kontakt" data-de="Kontakt" data-it="Contatti">Kontakt</a></li>
             </ul>
@@ -44,7 +45,7 @@
         <div class="hero" id="top">
             <div class="tiles" aria-hidden="true"></div>
             <div class="glow" aria-hidden="true"></div>
-            <!-- Foto di sfondo: aggiungi data-img="foto/NOME.jpg" -->
+            <!-- SLIDER INIZIALE: per ogni slide puoi scrivere data-img="./assets/foto.jpg" (foto di sfondo) oppure data-video="./assets/intro.mp4" (video di sfondo senza audio) -->
             <div class="slide on" data-img="">
                 <div class="wrap">
                     <h1 data-de="Plattenbeläge ganz nach Ihrem Geschmack"
@@ -81,6 +82,8 @@
                     <a class="btn" href="#ueber" data-de="Über uns" data-it="Chi siamo">Über uns</a>
                 </div>
             </div>
+            <div class="ctl"><button class="pv" aria-label="Zurück">‹</button><span class="cnt"></span><button
+                    class="nx" aria-label="Weiter">›</button></div>
             <div class="dots"></div>
         </div>
 
@@ -214,6 +217,16 @@
             </div>
         </section>
 
+        <section id="video" class="center" hidden>
+            <div class="wrap">
+                <p class="kick" data-de="Im Einsatz" data-it="Al lavoro">Im Einsatz</p>
+                <h2 data-de="Unsere Videos" data-it="I nostri video">Unsere Videos</h2>
+                <p class="lead" data-de="Sehen Sie uns bei der Arbeit." data-it="Guardaci al lavoro.">Sehen Sie uns bei
+                    der Arbeit.</p>
+                <div class="vids" id="vg"></div>
+            </div>
+        </section>
+
         <section id="ueber">
             <div class="wrap about">
                 <div class="portrait" data-img="">Antonio Floriello</div>
@@ -287,9 +300,11 @@
     <div class="lb" hidden role="dialog" aria-label="Foto">
         <button class="x" aria-label="Schliessen">×</button><button class="p" aria-label="Zurück">‹</button><button
             class="n" aria-label="Weiter">›</button>
-        <img alt="">
+        <img alt=""><video controls playsinline></video><iframe title="Video" allow="autoplay; fullscreen"
+            allowfullscreen></iframe>
         <p></p>
     </div>
+    <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
 

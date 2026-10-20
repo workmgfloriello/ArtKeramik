@@ -3,8 +3,13 @@
 
 /* FOTO DELLA GALLERIA: una riga per foto (metti i file nella cartella assets) */
 var FOTO = [
-   {src:"./assets/bagno.jpeg"},
+   {src:"./assets/image.png"},
    {src:"./assets/camere.jpeg"},
+   {src:"./assets/bagno2.jpg"},
+   {src:"./assets/image2.png"},
+   {src:"./assets/image3.png"},
+   {src:"./assets/image4.png"},
+   {src:"./assets/image5.png"},
 ];
 
 /* VIDEO: una riga per video. Due modi:
@@ -14,7 +19,8 @@ var FOTO = [
      (ID = le lettere dopo v= nel link di YouTube)
    Finché la lista è vuota, la sezione Video non compare. */
 var VIDEO = [
-  // {src:"./assets/lavoro1.mp4", poster:"./assets/lavoro1.jpg", de:"Badsanierung", it:"Ristrutturazione bagno"},
+   {src:"./assets/vid1.mp4"},
+   {src:"./assets/vid2.mp4"},
   // {yt:"dQw4w9WgXcQ", de:"Unser Team", it:"Il nostro team"},
 ];
 

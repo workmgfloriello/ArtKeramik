@@ -6,7 +6,7 @@ var FOTO = [
    {src:"./assets/image.png"},
    {src:"./assets/camere.jpeg"},
    {src:"./assets/bagno2.jpg"},
-   {src:"./assets/image2.jpg"},
+   {src:"./assets/image2.jpeg"},
    {src:"./assets/image3.png"},
    {src:"./assets/image4.png"},
    {src:"./assets/image5.png"},
@@ -21,6 +21,7 @@ var FOTO = [
 var VIDEO = [
    {src:"./assets/vid1.mp4"},
    {src:"./assets/vid2.mp4"},
+   {src:"./assets/vid3.mp4"},
   // {yt:"dQw4w9WgXcQ", de:"Unser Team", it:"Il nostro team"},
 ];
 

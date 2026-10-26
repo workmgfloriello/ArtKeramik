@@ -654,7 +654,8 @@ h2 {
     font-family: "Bodoni Moda", serif;
     font-size: 1.4rem;
     border-bottom: 4px solid var(--char);
-    background: linear-gradient(160deg, #d3141c, #5e0a0f)
+    background: url("./assets/antonio.jpeg");
+    background-size: cover;
 }
 
 .portrait.has {
